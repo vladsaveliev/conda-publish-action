@@ -19,6 +19,3 @@ RUN conda install -c conda-forge mamba
 RUN mamba update conda
 RUN mamba config --add channels defaults --add channels vladsaveliev --add channels bioconda --add channels conda-forge
 RUN mamba install -y pip versionpy conda-build conda-verify anaconda-client
-
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]

@@ -25,11 +25,11 @@ check_if_meta_yaml_file_exists() {
 
 build_package() {
     # Build for Linux
-    mamba build . --output-folder .
+    mamba build $1 --output-folder $1
 }
 
 install_package() {
-    mamba install --use-local $PACKAGE_NAME
+    mamba install --use-local $1
 }
 
 upload_package(){
