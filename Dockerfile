@@ -12,8 +12,8 @@ RUN wget \
     && mkdir /root/.conda \
     && bash miniconda.sh -b \
     && rm miniconda.sh
-ENV PATH=$PWD/miniconda3/bin:${PATH}
-ARG PATH=$PWD/miniconda3/bin:${PATH}
+ENV PATH=$HOME/miniconda3/bin:${PATH}
+ARG PATH=$HOME/miniconda3/bin:${PATH}
 RUN conda config --set always_yes yes --set changeps1 no
 RUN conda install -c conda-forge mamba
 RUN mamba update conda
